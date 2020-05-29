@@ -9,3 +9,4 @@ Study
   * Doubly Linked List
 * Stack (LIFO)
   * Array Stack
+  * Linked Stack (Linked List Stack)
