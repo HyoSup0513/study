@@ -1,5 +1,5 @@
-Study for Data structure, algorithm
-자료구조, 알고리즘 공부 정리
+# Study for Data structure, algorithm
+# 자료구조, 알고리즘 공부 정리
 ============
 
 [Github Blog](https://hyosup0513.github.io/)
