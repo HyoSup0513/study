@@ -1,6 +1,5 @@
 # Study for Data structure, algorithm
 # 자료구조, 알고리즘 공부 정리
-============
 
 [Github Blog](https://hyosup0513.github.io/)
 
@@ -17,7 +16,7 @@
   * [Array Stack](https://github.com/HyoSup0513/study/tree/master/Datastructure/Stack)
   * [Linked Stack (Linked List Stack)](https://github.com/HyoSup0513/study/tree/master/Datastructure/Stack)
 * Queue (FIFO)
-  * Array Queue
+  * [Circular Queue](https://github.com/HyoSup0513/study/tree/master/Datastructure/Queue)
   * Linked Queue (Linked List Queue)
 * Tree
 * Heap
