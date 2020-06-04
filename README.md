@@ -17,7 +17,7 @@
   * [Linked Stack (Linked List Stack)](https://github.com/HyoSup0513/study/tree/master/Datastructure/Stack)
 * Queue (FIFO)
   * [Circular Queue](https://github.com/HyoSup0513/study/tree/master/Datastructure/Queue)
-  * Linked Queue (Linked List Queue)
+  * [Linked Queue (Linked List Queue)](https://github.com/HyoSup0513/study/tree/master/Datastructure/Queue)
 * Tree
 * Heap
 * Graph
