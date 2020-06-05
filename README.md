@@ -19,6 +19,7 @@
   * [Circular Queue](https://github.com/HyoSup0513/study/tree/master/Datastructure/Queue)
   * [Linked Queue (Linked List Queue)](https://github.com/HyoSup0513/study/tree/master/Datastructure/Queue)
 * Tree
+  * [Binary Tree](https://github.com/HyoSup0513/study/tree/master/Datastructure/Tree)
 * Heap
 * Graph
 * Search
