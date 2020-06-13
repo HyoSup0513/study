@@ -57,6 +57,7 @@ BinTreeNode *addLeftChild(BinTreeNode *parent, char data)
         if (parent->leftChild == NULL)
         {
             parent->leftChild = createNewNode(data);
+            pReturn = parent->leftChild;
         }
         else
         {
@@ -74,6 +75,7 @@ BinTreeNode *addRightChild(BinTreeNode *parent, char data)
         if (parent->rightChild == NULL)
         {
             parent->rightChild = createNewNode(data);
+            pReturn = parent->rightChild;
         }
         else
         {
@@ -114,11 +116,68 @@ void deleteBinTree(BinTree *BinTree)
     }
 }
 
-int main(int argc, char *argv[])
+void preorderRecursiveNode(BinTreeNode *pNode)
+{
+    if (pNode != NULL)
+    {
+        printf("%c", pNode->data);
+        preorderRecursiveNode(pNode->leftChild);
+        preorderRecursiveNode(pNode->rightChild);
+    }
+}
+
+void preorderRecursive(BinTree *BinTree)
+{
+    if (BinTree != NULL)
+    {
+        preorderRecursiveNode(BinTree->root);
+        printf("\n");
+    }
+}
+
+void inorderRecursiveNode(BinTreeNode *pNode)
+{
+    if (pNode != NULL)
+    {
+        inorderRecursiveNode(pNode->leftChild);
+        printf("%c", pNode->data);
+        inorderRecursiveNode(pNode->rightChild);
+    }
+}
+
+void inorderRecursive(BinTree *BinTree)
+{
+    if (BinTree != NULL)
+    {
+        inorderRecursiveNode(BinTree->root);
+        printf("\n");
+    }
+}
+
+void postorderRecursiveNode(BinTreeNode *pNode)
+{
+    if (pNode != NULL)
+    {
+        postorderRecursiveNode(pNode->leftChild);
+        postorderRecursiveNode(pNode->rightChild);
+        printf("%c", pNode->data);
+    }
+}
+
+void postorderRecursive(BinTree *BinTree)
+{
+    if (BinTree != NULL)
+    {
+        postorderRecursiveNode(BinTree->root);
+        printf("\n");
+    }
+}
+
+BinTree *createExampleTree()
 {
     BinTree *pBinTree = NULL;
     BinTreeNode *NodeA = NULL, *NodeB = NULL, *NodeC = NULL;
-    BinTreeNode *NodeD = NULL, *NodeE = NULL, *NodeF = NULL;
+    BinTreeNode *NodeD = NULL, *NodeE = NULL, *NodeF = NULL, *NodeG;
 
     pBinTree = createBinTree('A');
     if (pBinTree != NULL)
@@ -129,14 +188,35 @@ int main(int argc, char *argv[])
 
         if (NodeB != NULL)
         {
-            NodeD = addLeftChild(NodeB, 'D');
+            addLeftChild(NodeB, 'D');
+            addRightChild(NodeB, 'E');
         }
         if (NodeC != NULL)
         {
-            NodeE = addLeftChild(NodeC, 'E');
-            NodeF = addRightChild(NodeC, 'F');
+
+            addLeftChild(NodeC, 'F');
+            addRightChild(NodeC, 'G');
         }
-        deleteBinTree(pBinTree);
     }
+
+    return pBinTree;
+}
+
+int main(int argc, char *argv[])
+{
+
+    BinTree *BinTree = createExampleTree();
+    if (BinTree != NULL)
+    {
+        printf("Pre-order Traversal Result: ");
+        preorderRecursive(BinTree);
+        printf("In-order Traversal Result: ");
+        inorderRecursive(BinTree);
+        printf("Post-order Traversal Result: ");
+        postorderRecursive(BinTree);
+
+        deleteBinTree(BinTree);
+    }
+
     return 0;
 }
