@@ -26,5 +26,6 @@
 * Tree
   * [Binary Tree](https://github.com/HyoSup0513/study/tree/master/Datastructure/Tree)
 * Heap
+  * [Array Heap](https://github.com/HyoSup0513/study/blob/master/Datastructure/Heap/array%20heap.c)
 * Graph
 * Search
