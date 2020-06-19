@@ -127,18 +127,15 @@ void deleteGraph(AdjGraph *pGraph)
 }
 int main(int argc, char *argv[])
 {
-    int nodeCount = 6;
+    int nodeCount = 4;
     AdjGraph *graph1 = createAdjGraph(nodeCount);
     if (graph1 != NULL)
     {
         addEdge(graph1, 0, 1);
-        addEdge(graph1, 1, 2);
-        addEdge(graph1, 2, 0);
+        addEdge(graph1, 0, 2);
+        addEdge(graph1, 1, 3);
         addEdge(graph1, 2, 3);
-        addEdge(graph1, 3, 2);
-        addEdge(graph1, 3, 4);
-        addEdge(graph1, 4, 5);
-        addEdge(graph1, 5, 3);
+        addEdge(graph1, 3, 1);
 
         printf("Graph1: Directed Graph\n");
         display(graph1);
