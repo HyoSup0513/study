@@ -29,7 +29,8 @@
 * Heap
   * [Array Heap](https://github.com/HyoSup0513/study/blob/master/Datastructure/Heap/array%20heap.c)
 * Graph
-  * [Graph using Adj Matrix](https://github.com/HyoSup0513/study/blob/master/Datastructure/Graph/AdjMatrixGraph.c)
+  * [Adjacency Matrix Directed Graph](https://github.com/HyoSup0513/study/tree/master/Datastructure/Graph/Using%20Adjacency%20Matrix)
+  * [Adjacency List Directed Graph](https://github.com/HyoSup0513/study/tree/master/Datastructure/Graph/Using%20Adjacency%20List)
 * Search
 
 4. Algorithm Problem Solving
