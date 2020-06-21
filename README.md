@@ -14,7 +14,7 @@
 
 3. Datastructure
 * List
-  * [Array List](https://github.com/HyoSup0513/study/tree/master/Datastructure/Array%20List)
+  * [Array List](https://github.com/HyoSup0513/study/blob/master/Datastructure/List/Array%20list.c)
   * [Linked List](https://github.com/HyoSup0513/study/blob/master/Datastructure/List/Linked%20List.c)
   * Circular Linked List
   * [Doubly Linked List](https://github.com/HyoSup0513/study/tree/master/Datastructure/Doubly%20Linked%20List)
@@ -31,6 +31,7 @@
 * Graph
   * [Adjacency Matrix Directed Graph](https://github.com/HyoSup0513/study/tree/master/Datastructure/Graph/Using%20Adjacency%20Matrix)
   * [Adjacency List Directed Graph](https://github.com/HyoSup0513/study/tree/master/Datastructure/Graph/Using%20Adjacency%20List)
+  * [DFS and BFS](https://github.com/HyoSup0513/study/tree/master/Datastructure/Graph/Graph%20Traversal)
 * Search
 
 4. Algorithm Problem Solving
