@@ -34,6 +34,7 @@
   * [Adjacency List Directed Graph](https://github.com/HyoSup0513/study/tree/master/Datastructure/Graph/Using%20Adjacency%20List)
   * [DFS and BFS](https://github.com/HyoSup0513/study/tree/master/Datastructure/Graph/Graph%20Traversal)
 * Search
+  * [Chaining Hash Table](https://github.com/HyoSup0513/study/blob/master/Datastructure/Search/ChainingHashTable.cpp)
 
 4. Algorithm Problem Solving
 * Leetcode
@@ -42,3 +43,5 @@
   * [Leetcode 16. 3Sum Closest](https://github.com/HyoSup0513/study/blob/master/Algorithms/LeetCode/16%203Sum%20Closest.md)
   * [Leetcode 17. Letter Combinations of a Phone Number](https://github.com/HyoSup0513/study/blob/master/Algorithms/LeetCode/17%20Letter%20Combinations%20of%20a%20Phone%20Number.md)
   * [Leetcode 18. 4Sum](https://github.com/HyoSup0513/study/blob/master/Algorithms/LeetCode/18%204Sum.md)
+  * [Leetcode 22. Generate Parentheses](https://github.com/HyoSup0513/study/blob/master/Algorithms/LeetCode/22%20Generate%20Parentheses.md)
+  * [Leetcode 24. Swap Nodes in Pairs](https://github.com/HyoSup0513/study/blob/master/Algorithms/LeetCode/24%20Swap%20Nodes%20in%20Pairs.md)
