@@ -35,6 +35,7 @@
   * [DFS and BFS](https://github.com/HyoSup0513/study/tree/master/Datastructure/Graph/Graph%20Traversal)
 * Search
   * [Chaining Hash Table](https://github.com/HyoSup0513/study/blob/master/Datastructure/Search/ChainingHashTable.cpp)
+  * [Binary Search Tree](https://github.com/HyoSup0513/study/blob/master/Datastructure/Tree/BinarySearchTree.cpp)
 
 4. Algorithm Problem Solving
 * Leetcode
