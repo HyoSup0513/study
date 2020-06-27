@@ -17,7 +17,10 @@ typedef struct LinkedListType
 LinkedList *createLinkedList()
 {
     LinkedList *pReturn = (LinkedList *)malloc(sizeof(LinkedList));
-    memset(pReturn, 0, sizeof(LinkedList)); // memory initialization to 0
+    if (pReturn != NULL)
+    {
+        memset(pReturn, 0, sizeof(LinkedList)); // memory initialization to 0
+    }
     return pReturn;
 }
 
@@ -35,24 +38,45 @@ int getLinkedListData(LinkedList *pList, int position)
 
 int addLinkedListData(LinkedList *pList, int position, int data)
 {
+    int ret = 0;
     int i = 0;
     LinkedListNode *pNewNode = NULL;
     LinkedListNode *pPrevNode = NULL;
 
-    pNewNode = (LinkedListNode *)malloc(sizeof(LinkedListNode));
-    pNewNode->data = data;
-
-    pPrevNode = &(pList->headerNode);
-    for (i = 0; i < position; i++)
+    if (pList != NULL)
     {
-        pPrevNode = pPrevNode->pLink;
+        if (position >= 0 && position <= pList->currentCount)
+        {
+            pNewNode = (LinkedListNode *)malloc(sizeof(LinkedListNode));
+            if (pNewNode != NULL)
+            {
+                pNewNode->data = data;
+
+                pPrevNode = &(pList->headerNode);
+                for (i = 0; i < position; i++)
+                {
+                    pPrevNode = pPrevNode->pLink;
+                }
+
+                pNewNode->pLink = pPrevNode->pLink;
+                pPrevNode->pLink = pNewNode;
+                pList->currentCount++;
+            }
+            else
+            {
+                ret = 1;
+            }
+        }
+        else
+        {
+            ret = 1;
+        }
     }
-
-    pNewNode->pLink = pPrevNode->pLink;
-    pPrevNode->pLink = pNewNode;
-    pList->currentCount++;
-
-    return 0;
+    else
+    {
+        ret = 1;
+    }
+    return ret;
 }
 
 int removeLinkedListData(LinkedList *pList, int position)
@@ -90,6 +114,7 @@ void deleteLinkedList(LinkedList *pList)
     free(pList);
 }
 
+// Get length using member variable
 int getLinkedListLength(LinkedList *pList)
 {
     if (pList != NULL)
@@ -98,6 +123,22 @@ int getLinkedListLength(LinkedList *pList)
     }
 
     return 0;
+}
+
+// Gen length without addming member variable
+int getLinkedListLength2(LinkedList *pList)
+{
+    int ret = 0;
+    if (NULL != pList)
+    {
+        LinkedListNode *pPreNode = pList->headerNode.pLink;
+        while (pPreNode != NULL)
+        {
+            ret++;
+            pPreNode = pPreNode->pLink;
+        }
+    }
+    return ret;
 }
 
 void display(LinkedList *pList)
@@ -109,23 +150,95 @@ void display(LinkedList *pList)
     }
 }
 
+void iterateLL(LinkedList *pList)
+{
+    int count = 0;
+    LinkedListNode *pNode = NULL;
+
+    pNode = pList->headerNode.pLink;
+    while (pNode != NULL)
+    {
+        printf("[%d] %d\n", count, pNode->data);
+        count++;
+        pNode = pNode->pLink;
+    }
+    printf("Number of nodes: %d\n\n", count);
+}
+
+void concatenation(LinkedList *pListA, LinkedList *pListB)
+{
+    LinkedListNode *pNodeA = NULL;
+    if (pListA != NULL && pListB != NULL)
+    {
+        pNodeA = pListA->headerNode.pLink;
+
+        if (pNodeA != NULL)
+        {
+            while (pNodeA != NULL && pNodeA->pLink != NULL)
+            {
+                pNodeA = pNodeA->pLink;
+            }
+            pNodeA->pLink = pListB->headerNode.pLink;
+        }
+        else
+        {
+            pListA->headerNode.pLink = pListB->headerNode.pLink;
+        }
+        pListB->headerNode.pLink = NULL;
+    }
+}
+
+void reverse(LinkedList *pList)
+{
+    LinkedListNode *pNode = NULL, *pCurrentNode = NULL, *pPrevNode = NULL;
+
+    if (pList != NULL)
+    {
+        pNode = pList->headerNode.pLink;
+        while (pNode != NULL)
+        {
+            pPrevNode = pCurrentNode;
+            pCurrentNode = pNode;
+            pNode = pNode->pLink;
+            pCurrentNode->pLink = pPrevNode;
+        }
+
+        pList->headerNode.pLink = pCurrentNode;
+    }
+}
+
 int main(int argc, char *argv[])
 {
-    LinkedList *pList = NULL;
-    int value = 0;
+    LinkedList *pListA = NULL;
+    LinkedList *pListB = NULL;
 
-    pList = createLinkedList();
-    addLinkedListData(pList, 0, 10);
-    addLinkedListData(pList, 0, 20);
-    addLinkedListData(pList, 0, 30);
+    pListA = createLinkedList();
+    pListB = createLinkedList();
+    addLinkedListData(pListA, 0, 10);
+    addLinkedListData(pListA, 1, 20);
+    addLinkedListData(pListA, 2, 30);
+    addLinkedListData(pListB, 0, 40);
+    addLinkedListData(pListB, 1, 50);
+    addLinkedListData(pListB, 2, 60);
 
-    value = getLinkedListData(pList, 1);
-    printf("Position: %d, Value: %d\n", 1, value);
-    display(pList);
+    printf("Before concatenation\n");
+    printf("List A\n");
+    iterateLL(pListA);
+    printf("List B\n");
+    iterateLL(pListB);
 
-    removeLinkedListData(pList, 0);
+    concatenation(pListA, pListB);
+    printf("After concatenation\n");
+    printf("List A\n");
+    iterateLL(pListA);
+    printf("List B\n");
+    iterateLL(pListB);
 
-    display(pList);
-    deleteLinkedList(pList);
+    reverse(pListA);
+    printf("Reversed List A\n");
+    iterateLL(pListA);
+
+    deleteLinkedList(pListA);
+    deleteLinkedList(pListB);
     return 0;
 }
