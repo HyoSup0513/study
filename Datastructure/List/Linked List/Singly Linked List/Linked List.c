@@ -5,7 +5,7 @@
 typedef struct LinkedListNodeType
 {
     int data;
-    struct LinkedListNodeType *pLink;
+    struct LinkedListNodeType *link;
 } LinkedListNode;
 
 typedef struct LinkedListType
@@ -16,126 +16,112 @@ typedef struct LinkedListType
 
 LinkedList *createLinkedList()
 {
-    LinkedList *pReturn = (LinkedList *)malloc(sizeof(LinkedList));
-    if (pReturn != NULL)
+    LinkedList *llist = (LinkedList *)malloc(sizeof(LinkedList));
+    if (llist != NULL)
     {
-        memset(pReturn, 0, sizeof(LinkedList)); // memory initialization to 0
+        memset(llist, 0, sizeof(LinkedList)); // memory initialization to 0
     }
-    return pReturn;
+    return llist;
 }
 
-int getLinkedListData(LinkedList *pList, int position)
+int getLinkedListData(LinkedList *llist, int position)
 {
     int i = 0;
-    LinkedListNode *pCurrentNode = &(pList->headerNode);
+    LinkedListNode *curNode = &(llist->headerNode);
     for (i = 0; i <= position; i++)
     {
-        pCurrentNode = pCurrentNode->pLink;
+        curNode = curNode->link;
     }
 
-    return pCurrentNode->data;
+    return curNode->data;
 }
 
-int addLinkedListData(LinkedList *pList, int position, int data)
+void addLinkedListData(LinkedList *llist, int position, int data)
 {
-    int ret = 0;
     int i = 0;
     LinkedListNode *pNewNode = NULL;
     LinkedListNode *pPrevNode = NULL;
 
-    if (pList != NULL)
+    if (llist != NULL)
     {
-        if (position >= 0 && position <= pList->currentCount)
+        if (position >= 0 && position <= llist->currentCount)
         {
             pNewNode = (LinkedListNode *)malloc(sizeof(LinkedListNode));
             if (pNewNode != NULL)
             {
                 pNewNode->data = data;
 
-                pPrevNode = &(pList->headerNode);
+                pPrevNode = &(llist->headerNode);
                 for (i = 0; i < position; i++)
                 {
-                    pPrevNode = pPrevNode->pLink;
+                    pPrevNode = pPrevNode->link;
                 }
 
-                pNewNode->pLink = pPrevNode->pLink;
-                pPrevNode->pLink = pNewNode;
-                pList->currentCount++;
-            }
-            else
-            {
-                ret = 1;
+                pNewNode->link = pPrevNode->link;
+                pPrevNode->link = pNewNode;
+                llist->currentCount++;
             }
         }
-        else
-        {
-            ret = 1;
-        }
     }
-    else
-    {
-        ret = 1;
-    }
-    return ret;
 }
 
-int removeLinkedListData(LinkedList *pList, int position)
+int removeLinkedListData(LinkedList *llist, int position)
 {
     int i = 0;
     LinkedListNode *pDelNode = NULL;
     LinkedListNode *pPrevNode = NULL;
 
-    pPrevNode = &(pList->headerNode);
+    pPrevNode = &(llist->headerNode);
     for (i = 0; i < position; i++)
     {
-        pPrevNode = pPrevNode->pLink;
+        pPrevNode = pPrevNode->link;
     }
 
-    pDelNode = pPrevNode->pLink;
-    pPrevNode->pLink = pDelNode->pLink;
+    pDelNode = pPrevNode->link;
+    pPrevNode->link = pDelNode->link;
     free(pDelNode);
-    pList->currentCount--;
+    llist->currentCount--;
 
     return 0;
 }
 
-void deleteLinkedList(LinkedList *pList)
+void deleteLinkedList(LinkedList *llist)
 {
     LinkedListNode *pDelNode = NULL;
-    LinkedListNode *pPrevNode = pList->headerNode.pLink;
+    LinkedListNode *pPrevNode = llist->headerNode.link;
     while (pPrevNode != NULL)
     {
         pDelNode = pPrevNode;
-        pPrevNode = pPrevNode->pLink;
+        pPrevNode = pPrevNode->link;
 
         free(pDelNode);
     }
 
-    free(pList);
+    free(llist);
 }
 
 // Get length using member variable
-int getLinkedListLength(LinkedList *pList)
+int getLinkedListLength(LinkedList *llist)
 {
-    if (pList != NULL)
+    if (llist != NULL)
     {
-        return pList->currentCount;
+        return llist->currentCount;
     }
 
     return 0;
 }
 
 // Gen length without addming member variable
-int getLinkedListLength2(LinkedList *pList)
+int getLinkedListLength2(LinkedList *llist)
 {
     int ret = 0;
-    if (NULL != pList)
+    if (NULL != llist)
     {
-        LinkedListNode *pPreNode = pList->headerNode.pLink;
+        LinkedListNode *pPreNode = llist->headerNode.link;
         while (pPreNode != NULL)
         {
             ret++;
-            pPreNode = pPreNode->pLink;
+            pPreNode = pPreNode->link;
         }
     }
     return ret;
@@ -150,17 +136,17 @@ void display(LinkedList *pList)
     }
 }
 
-void iterateLL(LinkedList *pList)
+void iterateLL(LinkedList *llist)
 {
     int count = 0;
     LinkedListNode *pNode = NULL;
 
-    pNode = pList->headerNode.pLink;
+    pNode = llist->headerNode.link;
     while (pNode != NULL)
     {
         printf("[%d] %d\n", count, pNode->data);
         count++;
-        pNode = pNode->pLink;
+        pNode = pNode->link;
     }
     printf("Number of nodes: %d\n\n", count);
 }
@@ -170,40 +156,40 @@ void concatenation(LinkedList *pListA, LinkedList *pListB)
     LinkedListNode *pNodeA = NULL;
     if (pListA != NULL && pListB != NULL)
     {
-        pNodeA = pListA->headerNode.pLink;
+        pNodeA = pListA->headerNode.link;
 
         if (pNodeA != NULL)
         {
-            while (pNodeA != NULL && pNodeA->pLink != NULL)
+            while (pNodeA != NULL && pNodeA->link != NULL)
             {
-                pNodeA = pNodeA->pLink;
+                pNodeA = pNodeA->link;
             }
-            pNodeA->pLink = pListB->headerNode.pLink;
+            pNodeA->link = pListB->headerNode.link;
         }
         else
         {
-            pListA->headerNode.pLink = pListB->headerNode.pLink;
+            pListA->headerNode.link = pListB->headerNode.link;
         }
-        pListB->headerNode.pLink = NULL;
+        pListB->headerNode.link = NULL;
     }
 }
 
-void reverse(LinkedList *pList)
+void reverse(LinkedList *llist)
 {
     LinkedListNode *pNode = NULL, *pCurrentNode = NULL, *pPrevNode = NULL;
 
-    if (pList != NULL)
+    if (llist != NULL)
     {
-        pNode = pList->headerNode.pLink;
+        pNode = llist->headerNode.link;
         while (pNode != NULL)
         {
             pPrevNode = pCurrentNode;
             pCurrentNode = pNode;
-            pNode = pNode->pLink;
-            pCurrentNode->pLink = pPrevNode;
+            pNode = pNode->link;
+            pCurrentNode->link = pPrevNode;
         }
 
-        pList->headerNode.pLink = pCurrentNode;
+        llist->headerNode.link = pCurrentNode;
     }
 }
 
