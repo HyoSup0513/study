@@ -15,9 +15,9 @@
 3. Datastructure
 * List
   * [Array List](https://github.com/HyoSup0513/study/blob/master/Datastructure/List/Array%20list.c)
-  * [Linked List](https://github.com/HyoSup0513/study/blob/master/Datastructure/List/Linked%20List.c)
-  * Circular Linked List
-  * [Doubly Linked List](https://github.com/HyoSup0513/study/tree/master/Datastructure/Doubly%20Linked%20List)
+  * [Singly Linked List](https://github.com/HyoSup0513/study/tree/master/Datastructure/List/Linked%20List/Singly%20Linked%20List)
+  * [Circular Linked List](https://github.com/HyoSup0513/study/tree/master/Datastructure/List/Linked%20List/Circular%20Linked%20List)
+  * [Doubly Linked List](https://github.com/HyoSup0513/study/tree/master/Datastructure/List/Linked%20List/Doubly%20Linked%20List)
 * Stack (LIFO)
   * [Array Stack](https://github.com/HyoSup0513/study/tree/master/Datastructure/Stack)
   * [Linked Stack (Linked List Stack)](https://github.com/HyoSup0513/study/tree/master/Datastructure/Stack)
@@ -35,7 +35,8 @@
   * [DFS and BFS](https://github.com/HyoSup0513/study/tree/master/Datastructure/Graph/Graph%20Traversal)
 * Search
   * [Chaining Hash Table](https://github.com/HyoSup0513/study/blob/master/Datastructure/Search/ChainingHashTable.cpp)
-  * [Binary Search Tree](https://github.com/HyoSup0513/study/blob/master/Datastructure/Tree/BinarySearchTree.cpp)
+  * [Binary Search Tree](https://github.com/HyoSup0513/study/blob/master/Datastructure/Search/BinarySearchTree.c)
+  * [Splay Tree](https://github.com/HyoSup0513/study/blob/master/Datastructure/Search/SplayTree.cpp)
 
 4. Algorithm Problem Solving
 * Leetcode
