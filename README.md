@@ -38,7 +38,10 @@
   * [Binary Search Tree](https://github.com/HyoSup0513/study/blob/master/Datastructure/Search/BinarySearchTree.c)
   * [Splay Tree](https://github.com/HyoSup0513/study/blob/master/Datastructure/Search/SplayTree.cpp)
 
-4. Algorithm Problem Solving
+4. Design Pattern
+* [Singleton Pattern](https://github.com/HyoSup0513/study/tree/master/Design%20Pattern/Singleton%20Pattern)
+
+5. Algorithm Problem Solving
 * Leetcode
   * [Leetcode 11. Container With Most Water](https://github.com/HyoSup0513/study/blob/master/Algorithms/LeetCode/11.%20Container%20With%20Most%20Water/11.py)
   * [Leetcode 12. 3Sum](https://github.com/HyoSup0513/study/blob/master/Algorithms/LeetCode/12%203Sum.md)
