@@ -1,17 +1,17 @@
 public class CherryComponentsFactory implements KeyboardsComponentsFactory {
     @Override
     public Body makeBody() {
-        return new AluminumBody();
+        return new CherryBody();
     }
 
     @Override
     public Plate makePlate() {
-        return new AluminumPlate();
+        return new CherryPlate();
 
     }
 
     @Override
     public Switchtype makeSwitch() {
-        return new RedSwitch();
+        return new CherrySwitch();
     }
 }

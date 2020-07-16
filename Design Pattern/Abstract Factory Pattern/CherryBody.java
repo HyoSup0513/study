@@ -1,4 +1,4 @@
-public class AluminumBody implements Body {
+public class CherryBody implements Body {
     @Override
     public String getName() {
         return "Aluminium";

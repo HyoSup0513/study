@@ -1,7 +1,7 @@
-public class RedSwitchKeyboards extends Keyboards {
+public class CherryKeyboards extends Keyboards {
     KeyboardsComponentsFactory keyboardsComponentsFactory;
 
-    public RedSwitchKeyboards(KeyboardsComponentsFactory keyboardsComponentsFactory) {
+    public CherryKeyboards(KeyboardsComponentsFactory keyboardsComponentsFactory) {
         this.keyboardsComponentsFactory = keyboardsComponentsFactory;
     }
 

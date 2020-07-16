@@ -1,4 +1,4 @@
-public class PlasticBody implements Body {
+public class GateronPlate implements Plate {
     @Override
     public String getName() {
         return "Plastic";

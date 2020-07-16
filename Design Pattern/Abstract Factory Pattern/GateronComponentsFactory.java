@@ -1,17 +1,17 @@
 public class GateronComponentsFactory implements KeyboardsComponentsFactory {
     @Override
     public Body makeBody() {
-        return new PlasticBody();
+        return new GateronBody();
     }
 
     @Override
     public Plate makePlate() {
-        return new PlasticPlate();
+        return new GateronPlate();
 
     }
 
     @Override
     public Switchtype makeSwitch() {
-        return new BlueSwitch();
+        return new GateronSwitch();
     }
 }
