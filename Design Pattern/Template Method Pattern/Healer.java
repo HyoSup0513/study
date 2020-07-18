@@ -1,4 +1,4 @@
-public class Healer extends Role {
+public class Healer extends Classes {
     @Override
     void prepareWeapon() {
         System.out.println("Equip a Wand");

@@ -1,7 +1,7 @@
-public abstract class Role {
+public abstract class Classes {
 
     void readyToBattle() {
-        startBodyTraining();
+        repairWeapons();
         prepareWeapon();
         prepareArmor();
         if (isUsingPrepareOther()) {
@@ -9,8 +9,8 @@ public abstract class Role {
         }
     }
 
-    final void startBodyTraining() {
-        System.out.println("Increase stamina.");
+    final void repairWeapons() {
+        System.out.println("Repair weapons..");
     }
 
     abstract void prepareWeapon();

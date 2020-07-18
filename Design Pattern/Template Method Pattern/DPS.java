@@ -1,4 +1,4 @@
-public class DPS extends Role {
+public class DPS extends Classes {
     @Override
     void prepareWeapon() {
         System.out.println("Equip a bow and a quiver.");
