@@ -14,6 +14,7 @@
 - Sorting Algorithm
   - [Mergesort](https://github.com/HyoSup0513/study/tree/master/Algorithms/Sorting%20Algorithm/MergeSort)
   - [Quicksort](https://github.com/HyoSup0513/study/tree/master/Algorithms/Sorting%20Algorithm/QuickSort)
+  - [Heapsort](https://github.com/HyoSup0513/study/tree/master/Algorithms/Sorting%20Algorithm/HeapSort)
 
 3. Datastructure
 
