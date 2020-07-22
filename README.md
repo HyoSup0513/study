@@ -49,6 +49,7 @@
 - [Factory Method Pattern](https://github.com/HyoSup0513/study/tree/master/Design%20Pattern/Factory%20Method%20Pattern)
 - [Abstract Factory Pattern](https://github.com/HyoSup0513/study/tree/master/Design%20Pattern/Abstract%20Factory%20Pattern)
 - [Template Method Pattern](https://github.com/HyoSup0513/study/tree/master/Design%20Pattern/Template%20Method%20Pattern)
+- [Builder Pattern](https://github.com/HyoSup0513/study/tree/master/Design%20Pattern/Builder%20Pattern)
 
 5. Algorithm Problem Solving
 
