@@ -15,8 +15,10 @@
   - [Mergesort](https://github.com/HyoSup0513/study/tree/master/Algorithms/Sorting%20Algorithm/MergeSort)
   - [Quicksort](https://github.com/HyoSup0513/study/tree/master/Algorithms/Sorting%20Algorithm/QuickSort)
   - [Heapsort](https://github.com/HyoSup0513/study/tree/master/Algorithms/Sorting%20Algorithm/HeapSort)
+- String Matching
+  - [Knuth_Morris_Pratt(KMP)](https://github.com/HyoSup0513/study/tree/master/Algorithms/KMP)
 
-3. Datastructure
+1. Datastructure
 
 - List
   - [Array List](https://github.com/HyoSup0513/study/blob/master/Datastructure/List/Array%20list.c)
