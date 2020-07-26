@@ -4,12 +4,12 @@
 
 [Github Blog](https://hyosup0513.github.io/)
 
-1. Small Algorithm project
+### 1. Small Algorithm project
 
 - [Hexomino shapes tiling and 3 coloring algorithm Visualization](https://github.com/HyoSup0513/study/tree/master/Algorithms/Hexomino%20tiling%20and%20three%20coloring)
 - [Mergesort, Quicksort, Gold's poresort Visualization](https://github.com/HyoSup0513/study/tree/master/Algorithms/Merge%2C%20Quick%2C%20Gold's%20Pore%20Sort)
 
-2. Algorithm Implementation
+### 2. Algorithm Implementation
 
 - Sorting Algorithm
   - [Mergesort](https://github.com/HyoSup0513/study/tree/master/Algorithms/Sorting%20Algorithm/MergeSort)
@@ -18,7 +18,7 @@
 - String Matching
   - [Knuth_Morris_Pratt(KMP)](https://github.com/HyoSup0513/study/tree/master/Algorithms/KMP)
 
-1. Datastructure
+### 3. Datastructure
 
 - List
   - [Array List](https://github.com/HyoSup0513/study/blob/master/Datastructure/List/Array%20list.c)
@@ -45,7 +45,7 @@
   - [Binary Search Tree](https://github.com/HyoSup0513/study/blob/master/Datastructure/Search/BinarySearchTree.c)
   - [Splay Tree](https://github.com/HyoSup0513/study/blob/master/Datastructure/Search/SplayTree.cpp)
 
-4. Design Pattern
+### 4. Design Pattern
 
 - [Singleton Pattern](https://github.com/HyoSup0513/study/tree/master/Design%20Pattern/Singleton%20Pattern)
 - [Factory Method Pattern](https://github.com/HyoSup0513/study/tree/master/Design%20Pattern/Factory%20Method%20Pattern)
@@ -53,7 +53,7 @@
 - [Template Method Pattern](https://github.com/HyoSup0513/study/tree/master/Design%20Pattern/Template%20Method%20Pattern)
 - [Builder Pattern](https://github.com/HyoSup0513/study/tree/master/Design%20Pattern/Builder%20Pattern)
 
-5. Algorithm Problem Solving
+### 5. Algorithm Problem Solving
 
 - Leetcode
   - [Leetcode 11. Container With Most Water](https://github.com/HyoSup0513/study/blob/master/Algorithms/LeetCode/11.%20Container%20With%20Most%20Water/11.py)
