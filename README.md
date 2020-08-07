@@ -54,6 +54,7 @@
 - [Builder Pattern](https://github.com/HyoSup0513/study/tree/master/Design%20Pattern/Builder%20Pattern)
 - [State Pattern](https://github.com/HyoSup0513/study/tree/master/Design%20Pattern/State%20Pattern)
 - [Strategy Pattern](https://github.com/HyoSup0513/study/tree/master/Design%20Pattern/Strategy%20Pattern)
+- [Adapter Pattern](https://github.com/HyoSup0513/study/tree/master/Design%20Pattern/Adapter%20Pattern)
 
 ### 5. Algorithm Problem Solving
 
